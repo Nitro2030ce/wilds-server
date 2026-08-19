@@ -1,13 +1,12 @@
 <div class="header" align="center">  
-<img src="persistence-logo.webp" alt="Persistence Logo" width="200"></div>
 
-Space Station 14 Persistence is a fork of Space Station 14.
+This is a fork of Space Station 14 Persistence which is a fork of Space Station 14.
 
 ## Links
 
 <div class="header" align="center">  
 
-[Discord](https://discord.ss14.io/) 
+[Discord]
 
 </div>
 
