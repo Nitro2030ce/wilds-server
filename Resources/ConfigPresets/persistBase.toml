@@ -1,8 +1,11 @@
 # Base configuration preset for SS14 Persistence. On the official server this is loaded before persist.toml
 # Related docs https://docs.spacestation14.com/en/general-development/tips/config-file-reference.html
 
+[net]
+port = 1213
+
 [game]
-hostname = "[NRP] Persistence Test Server"
+hostname = "[NRP] Wilds DEBUG Server"
 desc = "Don't mind me, just using the base ConfigPreset!"
 defaultpreset = "persist"
 soft_max_players = 30
@@ -12,9 +15,9 @@ autosaveinterval = 60
 tags = "rp:none"
 
 [infolinks]
-bug_report = "https://github.com/michaelchessall/SS14-Persistence/issues/new/choose"
-discord    = "https://discord.gg/PRjRkAN5NU"
-github     = "https://github.com/michaelchessall/SS14-Persistence"
+#bug_report = "https://github.com/michaelchessall/SS14-Persistence/issues/new/choose"
+#discord    = "https://discord.gg/PRjRkAN5NU"
+#github     = "https://github.com/michaelchessall/SS14-Persistence"
 
 [server]
 id = "Persistence"
