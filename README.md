@@ -1,6 +1,21 @@
 <div class="header" align="center">  
+    
+<h1>Wilds Sector 14</h1>
 
-This is a fork of Space Station 14 Persistence which is a fork of Space Station 14.
+
+
+This is a fork of Space Station 14 Persistence, which is a fork of Space Station 14. Wilds Sector 14 attempts to not use NT lore and do something different in a fresh, hardcore survival setting in a near-future era where all actions, and (most) events are fully player-driven; craft everything previously unavailable, interact with new and rebalanced mechanics intended specifically for longer rounds, new recipes and devices, create factions and build ships and stations with custom assignments and accesses, and more. Extended daily rounds that save everything at the end, and resume next next day.
+
+
+## Extra Credits
+
+Special thanks to 
+
+https://github.com/michaelchessall/SS14-Persistence and https://github.com/Summerly56/persistent-survival
+
+and
+
+https://github.com/space-wizards/space-station-14
 
 ## Links
 
