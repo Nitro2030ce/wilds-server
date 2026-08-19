@@ -1,4 +1,5 @@
 <div class="header" align="center">  
+<img width="256" height="256" alt="wildslogo" src="https://github.com/user-attachments/assets/c4860707-5e11-4286-aaa4-fd4b50c607ec" />
     
 <h1>Wilds Sector 14</h1>
 
