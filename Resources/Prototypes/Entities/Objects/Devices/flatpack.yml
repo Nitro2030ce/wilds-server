@@ -342,29 +342,33 @@
   - type: Flatpack
     entity: ComputerCargoBounty
 
-- type: entity
-  parent: BaseFlatpack
-  id: TinyFanFlatpack
-  name: tiny fan flatpack
-  description: A flatpack used for constructing a tiny fan. Useful for keeping gases in or out.
-  components:
-  - type: Flatpack
-    entity: AtmosDeviceFanTiny
-  - type: Sprite
-    layers:
-    - state: fan
+# Wilds SS14 - Disables directional and tiny fans, not good for hc survival!
 
-- type: entity
-  parent: BaseFlatpack
-  id: DirectionalFanFlatpack
-  name: directional fan flatpack
-  description: A flatpack used for constructing a directional fan. Useful for keeping gases in or out.
-  components:
-  - type: Flatpack
-    entity: AtmosDeviceFanDirectional
-  - type: Sprite
-    layers:
-    - state: fan
+#- type: entity
+#  parent: BaseFlatpack
+#  id: TinyFanFlatpack
+#  name: tiny fan flatpack
+#  description: A flatpack used for constructing a tiny fan. Useful for keeping gases in or out.
+#  components:
+#  - type: Flatpack
+#    entity: AtmosDeviceFanTiny
+#  - type: Sprite
+#    layers:
+#    - state: fan
+
+#- type: entity
+#  parent: BaseFlatpack
+#  id: DirectionalFanFlatpack
+#  name: directional fan flatpack
+#  description: A flatpack used for constructing a directional fan. Useful for keeping gases in or out.
+#  components:
+#  - type: Flatpack
+#    entity: AtmosDeviceFanDirectional
+#  - type: Sprite
+#    layers:
+#    - state: fan
+
+# Wilds SS14 - End
 
 - type: entity
   parent: [ BaseFlatpack, BaseSyndicateContraband ]
