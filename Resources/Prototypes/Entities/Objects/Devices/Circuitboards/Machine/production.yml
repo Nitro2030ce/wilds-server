@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   id: AutolatheMachineCircuitboard
   parent: BaseMachineCircuitboard
   name: autolathe machine board
@@ -212,7 +212,7 @@
 - type: entity
   id: UniformPrinterMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: uniform printer machine board
+  name: autoloom machine board
   components:
   - type: MachineBoard
     prototype: UniformPrinter
@@ -279,6 +279,23 @@
       stackRequirements:
         Manipulator: 1
         Glass: 5
+
+- type: entity
+  id: ArtifactAnalyzerAdvancedMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: advanced artifact analyzer machine board
+  description: A machine printed circuit board for an advanced artifact analyzer.
+  components:
+    - type: Sprite
+      state: science
+    - type: MachineBoard
+      prototype: MachineArtifactAnalyzerAdvanced
+      stackRequirements:
+        Manipulator: 4
+        Steel: 5
+        Glass: 5
+        Uranium: 1
+        Plasma: 3
 
 - type: entity
   id: ArtifactCrusherMachineCircuitboard

@@ -34,6 +34,9 @@
   id: AppraisalTool # Storage whitelist: BaseClothingBeltEngineering
 
 - type: Tag
+  id: ApcElectronics # ConstructionGraph
+
+- type: Tag
   id: Apron # ConstructionGraph: scraparmor
 
 - type: Tag
@@ -592,6 +595,11 @@
 - type: Tag
   id: FirelockElectronics # ConstructionGraph: Firelock
 
+#Persistence 14
+
+- type: Tag
+  id: FlagHand # Handy flags for bounties
+
 - type: Tag
   id: Flare # Storage whitelist: BaseClothingBeltEngineering
 
@@ -1024,6 +1032,9 @@
   id: NoConsoleSound # Blacklist on BaseComputer, StationMap. Tagged entity will not make sound when opening the UI.
 
 - type: Tag
+  id: NoGib # Persistence 14: Prevents anything this is put on from being gibbed. Temporary solution to gibbing related glitches.
+
+- type: Tag
   id: NotGhostnadoWarpable # Prevents the entity from being selected via "Warp to most followed" ghost warp
 
 - type: Tag
@@ -1208,6 +1219,15 @@
 - type: Tag
   id: PowerCellSmall # Storage whitelist: BaseWeaponPowerCell, PowerCellRecharger, ShuttleGunSvalinnMachineGun.
                      # ConstructionGraph: WallmountSubstation, makeshiftstunprod
+
+- type: Tag
+  id: PowerCellMedium
+
+- type: Tag
+  id: PowerCellHigh
+
+- type: Tag
+  id: PowerCellHyper
 
 - type: Tag
   id: Powerdrill # Storage whitelist: BaseClothingBeltEngineering. ItemMapper: BaseClothingBeltEngineering
