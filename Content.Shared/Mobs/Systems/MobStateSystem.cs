@@ -27,7 +27,6 @@ public partial class MobStateSystem : EntitySystem
         _mobStateQuery = GetEntityQuery<MobStateComponent>();
         base.Initialize();
         SubscribeEvents();
-        InitializeSoftcrit(); // funky
     }
 
     #region Public API
@@ -55,8 +54,7 @@ public partial class MobStateSystem : EntitySystem
     {
         if (!_mobStateQuery.Resolve(target, ref component, false))
             return false;
-        // funky, soft and hard crit both count as critical
-        return component.CurrentState is MobState.Critical or MobState.SoftCritical or MobState.HardCritical;
+        return component.CurrentState == MobState.Critical;
     }
 
     /// <summary>
@@ -82,8 +80,7 @@ public partial class MobStateSystem : EntitySystem
     {
         if (!_mobStateQuery.Resolve(target, ref component, false))
             return false;
-        // funky: add Mobstate.SoftCritical Mobstate.HardCritical
-        return component.CurrentState is MobState.Critical or MobState.SoftCritical or MobState.HardCritical or MobState.Dead;
+        return component.CurrentState is MobState.Critical or MobState.Dead;
     }
 
     /// <summary>

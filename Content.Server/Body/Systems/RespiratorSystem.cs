@@ -24,7 +24,6 @@ using Content.Shared.Mobs.Systems;
 using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
-using Content.Shared._Funkystation.Cpr; // funky
 
 namespace Content.Server.Body.Systems;
 
@@ -90,21 +89,7 @@ public sealed class RespiratorSystem : EntitySystem
 
             UpdateSaturation(uid, -(float)respirator.UpdateInterval.TotalSeconds, respirator);
 
-            // funky start, assisted respiration from cpr allows breathing in crit
-            var canBreathe = !_mobState.IsIncapacitated(uid);
-            if (!canBreathe && TryComp<AssistedRespirationComponent>(uid, out var assist))
-            {
-                if (_gameTiming.CurTime <= assist.AssistedUntil)
-                {
-                    canBreathe = true;
-                }
-                else
-                {
-                    RemCompDeferred<AssistedRespirationComponent>(uid);
-                }
-            }
-
-            if (canBreathe) // funky end
+            if (!_mobState.IsIncapacitated(uid)) // cannot breathe in crit.
             {
                 switch (respirator.Status)
                 {
@@ -202,11 +187,7 @@ public sealed class RespiratorSystem : EntitySystem
     /// </summary>
     public bool IsBreathing(Entity<RespiratorComponent?> ent)
     {
-        // funky start, assisted respiration allows breathing in crit
-        if (_mobState.IsIncapacitated(ent) && (!TryComp<AssistedRespirationComponent>(ent, out var assist) || _gameTiming.CurTime > assist.AssistedUntil))
-            return false;
-        // funky end
-
+        if (_mobState.IsIncapacitated(ent))
             return false;
 
         if (!Resolve(ent, ref ent.Comp))

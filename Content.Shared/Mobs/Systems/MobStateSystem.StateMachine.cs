@@ -101,19 +101,8 @@ public partial class MobStateSystem
     {
         var oldState = component.CurrentState;
         //make sure we are allowed to enter the new state
-        if (oldState == newState) // funky
+        if (oldState == newState || !component.AllowedStates.Contains(newState))
             return;
-
-        // funky start
-        var targetState = newState;
-        if (!component.AllowedStates.Contains(targetState))
-        {
-            if (!ResolveStateFallback(oldState, targetState, component, out targetState))
-                return;
-
-            newState = targetState;
-        }
-        // funky end
 
         OnExitState(target, component, oldState);
         component.CurrentState = newState;
