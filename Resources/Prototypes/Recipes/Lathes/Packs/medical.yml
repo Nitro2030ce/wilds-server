@@ -49,8 +49,6 @@
   - OffsetCane
   - OffsetCaneWood
   - JetInjector
-  - CMBloodPack
-  - CMIV
 
 - type: latheRecipePack
   id: RollerBedsStatic
